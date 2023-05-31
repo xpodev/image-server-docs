@@ -33,7 +33,7 @@ Here are two examples demonstrating how to use the Img.xpo.dev API:
    ```
    This will generate an image that is 300 pixels wide and 400 pixels tall.
 
-   [![300 x 400 image](https://img.xpo.dev/300x400)]
+   ![300 x 400 image](https://img.xpo.dev/300x400)
 
 2. If you want a square placeholder image with dimensions 500x500 pixels, you can use the following URL:
    ```
@@ -41,7 +41,7 @@ Here are two examples demonstrating how to use the Img.xpo.dev API:
    ```
    This will generate a square image that is 500 pixels wide and 500 pixels tall.
 
-   [![500 x 500 image](https://img.xpo.dev/500)]
+   ![500 x 500 image](https://img.xpo.dev/500)
 
 
 That's it! You can now easily generate placeholder images with custom dimensions using the img.xpo.dev API. Enjoy!
