@@ -1,47 +1,39 @@
-# Image API
+# Image Placeholder API Documentation
 
-This website provides a simple and convenient way to generate placeholder images with custom dimensions. You can easily specify the width and height of the image you need by appending the desired dimensions to the website URL.
+## API Endpoint
+The API endpoint for generating placeholder images is:
+`https://img.xpo.dev/{width}x{height}`
 
-## Usage
+This will generate a placeholder image with the specified width and height.
 
-The URL format for generating placeholder images is as follows:
+For example:
+- [https://img.xpo.dev/300x200](https://img.xpo.dev/300x200) - Generates a 300x200 pixels image.
+- [https://img.xpo.dev/200](https://img.xpo.dev/200) - Generates a 200x200 pixels image.
 
+## API Limitations
+There are a few limitations and potential errors to note:
+- The maximum image size is 15000x15000 pixels. If the requested size exceeds the maximum, an error will be returned.
+- If the requested size is invalid, such as having negative values or not following the format `{width}x{height}`, an error will be returned.
+
+## Error Responses
+If an error occurs, the API will respond with an appropriate error message. The response will have a JSON format:
+```json
+{
+  "error": "Error message"
+}
 ```
-https://img.xpo.dev/{width}x{height}
+
+## Example
+Here's an example of using the Image Placeholder API:
+```html
+<img src="https://img.xpo.dev/400x300" alt="Example Image" class="example-img" width="400" height="300">
 ```
+![Example Image](https://img.xpo.dev/400x300)
 
-- Replace `{width}` with the desired width of the image in pixels.
-- Replace `{height}` with the desired height of the image in pixels.
+---
 
-If you only specify one dimension, the image will be a square with that dimension.
+## Submitting Issues
+If you encounter any issues or have suggestions for improvement, please submit them on the [GitHub issue tracker](https://github.com/xpodev/image-server-docs/issues) for this project.
 
-## Default Size
+---
 
-If you don't specify any dimensions in the URL, the default size for the placeholder image is 150x150 pixels.
-
-## Maximum Size
-
-The maximum allowed dimensions for the generated images are 15000x15000 pixels. If you exceed this limit, the image will not be generated, and you will receive an error.
-
-## Examples
-
-Here are two examples demonstrating how to use the Img.xpo.dev API:
-
-1. To generate a placeholder image with dimensions 300x400 pixels, use the following URL:
-   ```
-   https://img.xpo.dev/300x400
-   ```
-   This will generate an image that is 300 pixels wide and 400 pixels tall.
-
-   ![300 x 400 image](https://img.xpo.dev/300x400)
-
-2. If you want a square placeholder image with dimensions 500x500 pixels, you can use the following URL:
-   ```
-   https://img.xpo.dev/500
-   ```
-   This will generate a square image that is 500 pixels wide and 500 pixels tall.
-
-   ![500 x 500 image](https://img.xpo.dev/500)
-
-
-That's it! You can now easily generate placeholder images with custom dimensions using the img.xpo.dev API. Enjoy!
